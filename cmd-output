@@ -1,0 +1,1143 @@
+Microsoft Windows [Version 10.0.22631.3737]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Sahana Deepak>cd Documents/
+
+C:\Users\Sahana Deepak\Documents>mkdir tool-tutorial
+
+C:\Users\Sahana Deepak\Documents>cd tool-tutorial/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>mkdir tool/
+The syntax of the command is incorrect.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>mkdir tool
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>mkdir testProject
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>cd tool/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>npm init -y
+Wrote to C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\package.json:
+
+{
+  "name": "tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>cd ../
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>cd testProject/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>npm init -y
+Wrote to C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject\package.json:
+
+{
+  "name": "testproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>cd../
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>cd tool/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>mkdir bin
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>touch bin/index.js
+'touch' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>echo. > bin\index.js
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>cd bin/index.js
+The directory name is invalid.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>cd bin/index/
+The system cannot find the path specified.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>cd bin/index.js/
+The directory name is invalid.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>cd bin/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin>node index.js
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin>cd ../
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>code bin\index.js
+
+
+added 1 package, and audited 3 packages in 1srist:ctor Comple
+
+found 0 vulnerabilities
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>cd ../test
+Project
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>npm
+ link tool
+
+added 1 package, and audited 3 packages in 1s
+
+found 0 vulnerabilities
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>dir node_modules\.bin
+ Volume in drive C is OS
+ Volume Serial Number is 82EC-6617
+
+ Directory of C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject\node_modules\.bin
+
+07/15/2024  03:26 PM    <DIR>          .
+07/15/2024  03:26 PM    <DIR>          ..
+07/15/2024  03:26 PM               302 tool
+07/15/2024  03:26 PM               322 tool.cmd
+07/15/2024  03:26 PM               793 tool.ps1
+               3 File(s)          1,417 bytes
+               2 Dir(s)  61,544,919,040 bytes free
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>too
+l
+hello tool
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>too
+l --start
+[
+  'C:\\Program Files\\nodejs\\node.exe',
+  'C:\\Users\\Sahana Deepak\\AppData\\Roaming\\npm\\node_modules\\tool\\bin\\index.js',
+  '--start'
+]
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+node:internal/modules/cjs/loader:1147
+  throw err;
+  ^
+
+Error: Cannot find module 'arg'
+Require stack:
+- C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js:2:13)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Sahana Deepak\\Documents\\tool-tutorial\\tool\\bin\\index.js'
+  ]
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+(node:22820) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js:2
+import arg from 'arg';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+    at node:internal/main/run_main_module:28:49
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+node:internal/modules/cjs/loader:1147
+  throw err;
+  ^
+
+Error: Cannot find module 'arg'
+Require stack:
+- C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js:2:13)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Sahana Deepak\\Documents\\tool-tutorial\\tool\\bin\\index.js'
+  ]
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>cd ../
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>npm install arg
+
+added 1 package, removed 2 packages, and audited 219 packages in 2s
+
+20 packages are looking for funding
+  run `npm fund` for details
+
+2 high severity vulnerabilities
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+npm notice
+npm notice New minor version of npm available! 10.0.0 -> 10.8.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.8.2
+npm notice Run npm install -g npm@10.8.2 to update!
+npm notice
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>npm install -g npm@10.8.2
+
+removed 74 packages, and changed 92 packages in 14s
+
+22 packages are looking for funding
+  run `npm fund` for details
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>cd testProject/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+{ _: [], '--start': true }
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --build
+{ _: [], '--build': true }
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+starting the app
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool
+--publish
+unknown or unexpected option: --publish
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --publish
+unknown or unexpected option: --publish
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js:16
+  usage();
+  ^
+
+ReferenceError: usage is not defined
+    at Object.<anonymous> (C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js:16:3)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+    at node:internal/main/run_main_module:28:49
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --publish
+unknown or unexpected option: --publish
+
+tool [CMD]
+    --start     Starts the app
+    --build     Builds the app
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>cd ..
+/tool
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>npm i chalk
+
+added 1 package, and audited 2 packages in 2s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>tool --start
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js:3
+const chalk = require('chalk');
+              ^
+
+Error [ERR_REQUIRE_ESM]: require() of ES Module C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\node_modules\chalk\source\index.js from C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js not supported.
+Instead change the require of C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\node_modules\chalk\source\index.js in C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js to a dynamic import() which is available in all CommonJS modules.
+    at Object.<anonymous> (C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js:3:15) {
+  code: 'ERR_REQUIRE_ESM'
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>tool --start
+
+(node:33128) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js:2
+import arg from 'arg';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+    at node:internal/main/run_main_module:28:49
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>tool --start
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js:3
+const chalk = require('chalk');
+              ^
+
+Error [ERR_REQUIRE_ESM]: require() of ES Module C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\node_modules\chalk\source\index.js from C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js not supported.
+Instead change the require of C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\node_modules\chalk\source\index.js in C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js to a dynamic import() which is available in all CommonJS modules.
+    at Object.<anonymous> (C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js:3:15) {
+  code: 'ERR_REQUIRE_ESM'
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>tool --start
+
+file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/bin/index.js:3
+import { bgCyanBright, yellow, whiteBright, greenBright } from 'chalk';
+         ^^^^^^^^^^^^
+SyntaxError: The requested module 'chalk' does not provide an export named 'bgCyanBright'
+    at ModuleJob._instantiate (node:internal/modules/esm/module_job:132:21)
+    at async ModuleJob.run (node:internal/modules/esm/module_job:214:5)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>tool --start
+
+file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/bin/index.js:2
+const arg = require('arg');
+            ^
+
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/bin/index.js:2:13
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>npm install arg
+
+added 1 package, and audited 3 packages in 1s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>cd ../testProject
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+starting the app
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --publish
+unknown or unexpected option: --publish
+
+tool [CMD]
+    --start     Starts the app
+    --build     Builds the app
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>cd src
+The system cannot find the path specified.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+require is not defined
+
+tool [CMD]
+    --start     Starts the app
+    --build     Builds the app
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+node:internal/modules/esm/resolve:844
+  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+        ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'pkgUp' imported from C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js
+    at packageResolve (node:internal/modules/esm/resolve:844:9)
+    at moduleResolve (node:internal/modules/esm/resolve:901:20)
+    at defaultResolve (node:internal/modules/esm/resolve:1121:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:396:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:365:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:240:38)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:85:39)
+    at link (node:internal/modules/esm/module_job:84:36) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --publish
+node:internal/modules/esm/resolve:844
+  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+        ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'pkgUp' imported from C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js
+    at packageResolve (node:internal/modules/esm/resolve:844:9)
+    at moduleResolve (node:internal/modules/esm/resolve:901:20)
+    at defaultResolve (node:internal/modules/esm/resolve:1121:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:396:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:365:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:240:38)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:85:39)
+    at link (node:internal/modules/esm/module_job:84:36) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>npm install pkg-up
+
+added 7 packages, removed 1 package, and audited 9 packages in 2s
+
+6 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>npm install pkg-up
+
+up to date, audited 9 packages in 2s
+
+6 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+node:internal/modules/esm/resolve:844
+  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+        ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'pkgUp' imported from C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js
+    at packageResolve (node:internal/modules/esm/resolve:844:9)
+    at moduleResolve (node:internal/modules/esm/resolve:901:20)
+    at defaultResolve (node:internal/modules/esm/resolve:1121:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:396:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:365:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:240:38)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:85:39)
+    at link (node:internal/modules/esm/module_job:84:36) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>cd ..
+/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>npm install pkg-up
+
+added 7 packages, and audited 226 packages in 2s
+
+26 packages are looking for funding
+  run `npm fund` for details
+
+2 high severity vulnerabilities
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>cd testProject/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool
+--start
+pkgUp.sync is not a function
+
+tool [CMD]
+    --start     Starts the app
+    --build     Builds the app
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>cd ..
+/tool
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>mkdir src
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>mkdir src/co
+mmands
+The syntax of the command is incorrect.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>cd src/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src>mkdir co
+mmands
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src>mkdir co
+nfig
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src>echo > commands\start.js
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src>echo. >
+commands\start.js
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src>echo. > config\config-mgr.js
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src>cd ../..
+/testProject
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool
+--start
+file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/bin/index.js:8
+import getConfig from ('../src/config/config-mgr');
+                      ^
+
+SyntaxError: Unexpected token '('
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:155:18)
+    at callTranslator (node:internal/modules/esm/loader:285:14)
+    at ModuleLoader.moduleProvider (node:internal/modules/esm/loader:291:30)
+    at async link (node:internal/modules/esm/module_job:76:21)
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/bin/index.js:8
+import getConfig from ('./src/config/config-mgr');
+                      ^
+
+SyntaxError: Unexpected token '('
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:155:18)
+    at callTranslator (node:internal/modules/esm/loader:285:14)
+    at ModuleLoader.moduleProvider (node:internal/modules/esm/loader:291:30)
+    at async link (node:internal/modules/esm/module_job:76:21)
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+node:internal/modules/esm/resolve:255
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\src\config\config-mgr' imported from C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js
+    at finalizeResolution (node:internal/modules/esm/resolve:255:11)
+    at moduleResolve (node:internal/modules/esm/resolve:908:10)
+    at defaultResolve (node:internal/modules/esm/resolve:1121:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:396:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:365:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:240:38)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:85:39)
+    at link (node:internal/modules/esm/module_job:84:36) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/bin/src/config/config-mgr'
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+node:internal/modules/esm/resolve:255
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\src\config\config-mgr' imported from C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js
+    at finalizeResolution (node:internal/modules/esm/resolve:255:11)
+    at moduleResolve (node:internal/modules/esm/resolve:908:10)
+    at defaultResolve (node:internal/modules/esm/resolve:1121:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:396:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:365:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:240:38)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:85:39)
+    at link (node:internal/modules/esm/module_job:84:36) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/bin/src/config/config-mgr'
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+node:internal/modules/esm/resolve:772
+    throw new ERR_INVALID_MODULE_SPECIFIER(
+          ^
+
+TypeError [ERR_INVALID_MODULE_SPECIFIER]: Invalid module ".config-mgr.js" is not a valid package name imported from C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\bin\index.js
+    at parsePackageName (node:internal/modules/esm/resolve:772:11)
+    at packageResolve (node:internal/modules/esm/resolve:795:5)
+    at moduleResolve (node:internal/modules/esm/resolve:901:20)
+    at defaultResolve (node:internal/modules/esm/resolve:1121:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:396:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:365:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:240:38)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:85:39)
+    at link (node:internal/modules/esm/module_job:84:36) {
+  code: 'ERR_INVALID_MODULE_SPECIFIER'
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+pkgUp.sync is not a function
+
+tool [CMD]
+    --start     Starts the app
+    --build     Builds the app
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>cd ..
+/tool
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>npm insta cosmiconfig
+
+added 25 packages, and audited 28 packages in 4s
+
+4 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>npm install
+cosmiconfig
+
+up to date, audited 28 packages in 2s
+
+4 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>cd ../testPr
+oject
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>mkdir
+ tool.config.js
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>echo.
+ > tool.config.js
+Access is denied.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>cd ..
+/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>echo. > testProject\tool.config.js
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>cd testProject/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool
+--start
+require is not defined
+
+tool [CMD]
+    --start     Starts the app
+    --build     Builds the app
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+Found configuration { port: 9999 }
+  Starting the app
+Received configuration in start - { port: 9999 }
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>cd ..
+/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>cd tool/src/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src>echo. >
+config\schema.json
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src>cd ../testProject
+The system cannot find the path specified.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src>cd ../../testProject
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool
+--start
+node:internal/modules/esm/assert:89
+        throw new ERR_IMPORT_ASSERTION_TYPE_MISSING(url, validType);
+              ^
+
+TypeError [ERR_IMPORT_ASSERTION_TYPE_MISSING]: Module "file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/src/config/schema.json" needs an import attribute of type "json"
+    at validateAttributes (node:internal/modules/esm/assert:89:15)
+    at defaultLoad (node:internal/modules/esm/load:150:3)
+    at async ModuleLoader.load (node:internal/modules/esm/loader:409:7)
+    at async ModuleLoader.moduleProvider (node:internal/modules/esm/loader:291:45) {
+  code: 'ERR_IMPORT_ASSERTION_TYPE_MISSING'
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+(node:36500) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/src/config/config-mgr.js:5
+const Ajv = require('ajv').default;
+            ^
+
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/src/config/config-mgr.js:5:13
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+node:internal/modules/esm/resolve:844
+  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+        ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'ajv' imported from C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src\config\config-mgr.js
+    at packageResolve (node:internal/modules/esm/resolve:844:9)
+    at moduleResolve (node:internal/modules/esm/resolve:901:20)
+    at defaultResolve (node:internal/modules/esm/resolve:1121:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:396:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:365:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:240:38)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:85:39)
+    at link (node:internal/modules/esm/module_job:84:36) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>cd ..
+/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>npm install ajv
+
+added 5 packages, and audited 231 packages in 5s
+
+27 packages are looking for funding
+  run `npm fund` for details
+
+2 high severity vulnerabilities
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>cd testProject/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool
+--start
+(node:36996) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+strict mode: missing type "object" for keyword "properties" at "#" (strictTypes)
+Found configuration { port: 9999 }
+  Starting the app
+Received configuration in start - { port: 9999 }
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+(node:30272) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+strict mode: missing type "object" for keyword "properties" at "#" (strictTypes)
+Found configuration { port: 9999 }
+  Starting the app
+Received configuration in start - { port: 9999 }
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>cd ..
+/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>npm install better-ajv-errors
+
+added 4 packages, and audited 235 packages in 4s
+
+27 packages are looking for funding
+  run `npm fund` for details
+
+2 high severity vulnerabilities
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>cd testProject
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>npm install better-ajv-errors
+
+added 27 packages, and audited 36 packages in 4s
+
+9 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+(node:30592) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+node:internal/modules/esm/resolve:844
+  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+        ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'betterAjvErrors' imported from C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src\config\config-mgr.js
+    at packageResolve (node:internal/modules/esm/resolve:844:9)
+    at moduleResolve (node:internal/modules/esm/resolve:901:20)
+    at defaultResolve (node:internal/modules/esm/resolve:1121:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:396:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:365:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:240:38)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:85:39)
+    at link (node:internal/modules/esm/module_job:84:36) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>npm install better-ajv-errors
+
+up to date, audited 36 packages in 2s
+
+9 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+(node:38060) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+NOT SUPPORTED: option jsonPointers. Deprecated jsPropertySyntax can be used instead.
+strict mode: missing type "object" for keyword "properties" at "#" (strictTypes)
+Found configuration { port: 9999 }
+  Starting the app
+Received configuration in start - { port: 9999 }
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+(node:30408) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+NOT SUPPORTED: option jsonPointers. Deprecated jsPropertySyntax can be used instead.
+Found configuration { port: 9999 }
+  Starting the app
+Received configuration in start - { port: 9999 }
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>node
+--trace-warnings ...
+node:internal/modules/cjs/loader:1147
+  throw err;
+  ^
+
+Error: Cannot find module 'C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject\...'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>cd ..
+/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>node --trace-warnings ...
+node:internal/modules/cjs/loader:1147
+  throw err;
+  ^
+
+Error: Cannot find module 'C:\Users\Sahana Deepak\Documents\tool-tutorial\...'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>node --trace-warnings bin/index.js
+node:internal/modules/cjs/loader:1147
+  throw err;
+  ^
+
+Error: Cannot find module 'C:\Users\Sahana Deepak\Documents\tool-tutorial\bin\index.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>npm install
+
+up to date, audited 235 packages in 1s
+
+27 packages are looking for funding
+  run `npm fund` for details
+
+2 high severity vulnerabilities
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>npm audit fix
+
+added 3 packages, removed 1 package, changed 1 package, and audited 237 packages in 2s
+
+27 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>cd tool/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>echo. > src\
+logger.js
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\tool>cd ../testPr
+oject
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool
+--start
+node:internal/modules/esm/resolve:255
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src\logger' imported from C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src\config\config-mgr.js
+    at finalizeResolution (node:internal/modules/esm/resolve:255:11)
+    at moduleResolve (node:internal/modules/esm/resolve:908:10)
+    at defaultResolve (node:internal/modules/esm/resolve:1121:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:396:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:365:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:240:38)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:85:39)
+    at link (node:internal/modules/esm/module_job:84:36) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/src/logger'
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+(node:24352) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+node:internal/modules/esm/resolve:255
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src\logger' imported from C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src\config\config-mgr.js
+    at finalizeResolution (node:internal/modules/esm/resolve:255:11)
+    at moduleResolve (node:internal/modules/esm/resolve:908:10)
+    at defaultResolve (node:internal/modules/esm/resolve:1121:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:396:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:365:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:240:38)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:85:39)
+    at link (node:internal/modules/esm/module_job:84:36) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/src/logger'
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+(node:40700) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+node:internal/modules/esm/resolve:255
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src\logger' imported from C:\Users\Sahana Deepak\Documents\tool-tutorial\tool\src\config\config-mgr.js
+    at finalizeResolution (node:internal/modules/esm/resolve:255:11)
+    at moduleResolve (node:internal/modules/esm/resolve:908:10)
+    at defaultResolve (node:internal/modules/esm/resolve:1121:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:396:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:365:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:240:38)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:85:39)
+    at link (node:internal/modules/esm/module_job:84:36) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/src/logger'
+}
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+(node:10676) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/src/logger.js:1
+import { gray, yellow, bgCyanBright } from 'chalk';
+                       ^^^^^^^^^^^^
+SyntaxError: The requested module 'chalk' does not provide an export named 'bgCyanBright'
+    at ModuleJob._instantiate (node:internal/modules/esm/module_job:132:21)
+    at async ModuleJob.run (node:internal/modules/esm/module_job:214:5)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+(node:31072) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/src/logger.js:1
+import { gray, yellow, bgCyanBright } from 'chalk';
+                       ^^^^^^^^^^^^
+SyntaxError: The requested module 'chalk' does not provide an export named 'bgCyanBright'
+    at ModuleJob._instantiate (node:internal/modules/esm/module_job:132:21)
+    at async ModuleJob.run (node:internal/modules/esm/module_job:214:5)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+(node:39080) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+file:///C:/Users/Sahana%20Deepak/Documents/tool-tutorial/tool/src/logger.js:1
+import { gray, yellow, bgCyan } from 'chalk';
+                       ^^^^^^
+SyntaxError: The requested module 'chalk' does not provide an export named 'bgCyan'
+    at ModuleJob._instantiate (node:internal/modules/esm/module_job:132:21)
+    at async ModuleJob.run (node:internal/modules/esm/module_job:214:5)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+
+Node.js v20.10.0
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+(node:11856) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+NOT SUPPORTED: option jsonPointers. Deprecated jsPropertySyntax can be used instead.
+Recieved args { _: [], '--start': true }
+Found configuration { port: 9999 }
+  Starting the app
+Received configuration { port: 9999 }
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+(node:40288) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+NOT SUPPORTED: option jsonPointers. Deprecated jsPropertySyntax can be used instead.
+Recieved args { _: [], '--start': true }
+Found configuration { port: 9999 }
+  Starting the app
+Received configuration { port: 9999 }
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool --start
+(node:35100) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+NOT SUPPORTED: option jsonPointers. Deprecated jsPropertySyntax can be used instead.
+Received args { _: [], '--start': true }
+Found configuration { port: 9999 }
+  Starting the app
+Received configuration { port: 9999 }
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>DEBUG=* tool --start
+'DEBUG' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>npm i
+ debug
+
+added 2 packages, and audited 38 packages in 1s
+
+9 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>DEBUG=* tool --start
+'DEBUG' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>DEBUG=* tool --start
+'DEBUG' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>cd ..
+/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>npm install debug
+
+
+changed 1 package, and audited 237 packages in 905ms
+
+27 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial>cd testProject/
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>npm install debug
+
+up to date, audited 38 packages in 860ms
+
+9 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>DEBUG=* tool --start
+'DEBUG' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>set DEBUG=* && tool --start
+(node:22344) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+NOT SUPPORTED: option jsonPointers. Deprecated jsPropertySyntax can be used instead.
+Received args { _: [], '--start': true }
+Found configuration { port: 9999 }
+  Starting the app
+Received configuration { port: 9999 }
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>DEBUG=* tool --start
+'DEBUG' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool
+--build
+(node:15148) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+NOT SUPPORTED: option jsonPointers. Deprecated jsPropertySyntax can be used instead.
+Received args { _: [], '--build': true }
+Build command is not yet implemented
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>tool
+--publish
+(node:11220) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+NOT SUPPORTED: option jsonPointers. Deprecated jsPropertySyntax can be used instead.
+unknown or unexpected option: --publish
+
+tool [CMD]
+  --start       Starts the app
+  --build       Builds the app
+
+C:\Users\Sahana Deepak\Documents\tool-tutorial\testProject>
